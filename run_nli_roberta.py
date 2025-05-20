@@ -180,7 +180,7 @@ class LoraArguments:
 
 def insertParams(model_args, data_args, training_args, lora_args):
     model_args.model_name_or_path = "models/roberta-base"
-    dataset_name = "SNLI"
+    dataset_name = "SNLI_biased"
     if data_args.dataset == "SNLI_gen":
         train_file = f"data/gen_{dataset_name}/SNLI_train.jsonl"
         eval_file = f"data/gen_{dataset_name}/SNLI_gen_dev.jsonl"
@@ -189,10 +189,6 @@ def insertParams(model_args, data_args, training_args, lora_args):
         train_file = f"data/biased_{dataset_name}/train.jsonl"
         eval_file = f"data/biased_{dataset_name}/dev.jsonl"
         test_file = f"data/biased_{dataset_name}/test.jsonl"
-    elif data_args.dataset == "SNLI_biased_detail":
-        train_file = f"data/biased_{dataset_name}_detail/train.jsonl"
-        eval_file = f"data/biased_{dataset_name}_detail/dev.jsonl"
-        test_file = f"data/biased_{dataset_name}_detail/test.jsonl"
     data_args.train_file = train_file
     data_args.validation_file = eval_file
     data_args.test_file = test_file
