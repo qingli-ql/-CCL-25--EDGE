@@ -27,7 +27,7 @@ python run_nli_roberta.py --output=./output
 ## Core Mechanism of EDGE
 The core debiasing algorithm of EDGE is implemented in a custom Trainer class located in "./modules/EDGETrain.py".
 
-This class extends the HuggingFace Trainer and overrides the training step to apply gradient decomposition and projection between general context encoding (GCE) and empirical risk minimization (ERM) components. A simplified excerpt is provided below:
+This class extends the HuggingFace Trainer and overrides the training step to apply gradient decomposition and projection between generalized cross entropy (GCE) and empirical risk minimization (ERM) components. A simplified excerpt is provided below:
 
 ```python
 # Step 1: Compute GCE gradients (bias-aligned signals)
