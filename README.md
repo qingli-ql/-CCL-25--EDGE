@@ -1,6 +1,5 @@
 ﻿<div align="center">
 
-# Code for the submitted paper 44 
 # EDGE: Enhanced Debiased Gradient Extraction for Robust Fine‑tuning
 
 ![Example](figures/pipeline.png)
